@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "reminiscent-armadillo-416.convex.cloud",
       },
+      {
+        protocol: "https",
+        hostname: "img.clerk.com",
+      },
     ],
   },
 };
