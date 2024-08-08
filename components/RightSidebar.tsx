@@ -16,9 +16,10 @@ const RightSidebar = () => {
   const { user } = useUser();
   const topPodcasters = useQuery(api.users.getTopUserByPodcastCount);
   const router = useRouter();
+  const { audio } = useAudio();
 
   if (!topPodcasters) return <LoaderSpinner />;
-  const { audio } = useAudio();
+
   return (
     <section
       className={cn("right_sidebar h-[calc(100vh-5px)]", {
@@ -46,7 +47,7 @@ const RightSidebar = () => {
         <Carousel fansLikeDetail={topPodcasters!} />
       </section>
       <section className="flex flex-col gap-8 pt-12">
-        <Header headerTitle="Top Podcastrs" />
+        <Header headerTitle="Top Podcasters" />
         <div className="flex flex-col gap-6">
           {topPodcasters?.slice(0, 3).map((podcaster) => (
             <div
