@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <ConvexClerkProvider>
         <AudioProvider>
-          <body className={manrope.className}>{children}</body>
+          <body className={`${manrope.className}`}>{children}</body>
         </AudioProvider>
       </ConvexClerkProvider>
     </html>
